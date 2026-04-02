@@ -1,0 +1,26 @@
+Speaker Notes (incomplete)
+
+10) Scatter plots showing the expression of four endocrine hormones in β-cells. Cells (x-axis) are sorted based on decreasing expression of INS expression.  Each of the four cell-types highly expresses one of the four hormones, confirming the purity of the cell-type dataset (α, β, γ and δ-cells highly expressing GCG, INS, PPY, and SST respectively).
+
+We can be confident that our dataset contains only β-cells.
+
+11) A resorting of the previous slide's scatterplot.  Instead of INS expression level (decreasing), the cells are sorted by healthy, then T2D.  A preliminary observation suggests the gene expression profile shifts in T2D cells vs healthy β-cells.
+
+12) This boxplot confirms the preliminary observation of the previous slide.  In fact, there is a statistical difference between healthy and T2D β-cells in three of the four gene expressions.
+
+14) t-SNE visualization of all β-cells, colored first by condition and second by donor.  The dataset first reduced the 62,710 gene-expression levels down to 30 principle components.  Then a t-SNE (2 dimensions) was applied.
+
+We can observed healthy and T2D clusters, suggesting a shift in gene expression profiles (confirming slide 12).  We also observe for the most part donor-specific β-cells clustering, suggesting that gene expression profiles also differ between donors.  We recommend that more donors are included in follow-up studies to help clarify how much gene expression differences are due to condition vs donor peculiarities.
+
+16) Gene expression levels of 5 different genes in β-cells.  High gene expression of INS confirms once again that the population is of β-cells alone.  The other 4 show expression levels that range quite a bit.  The paper claims that these levels are quantized and suggest various cell states (subpopulations) among the β-cell population.
+
+
+19) A Logistical Regression classifier model was trained on the gene expression levels.  The top 15 most predictive genes for this model are plotted.  Genes that are colored red have been linked to T2D.  This finding suggests again a real gene expression profile change between healthy and T2D β-cells.
+
+As an aside, the most predictive gene here is IRF2BPL. This gene encodes a transcription factor that may play a role in regulating female reproductive function. [provided by RefSeq, Jun 2012].  It is quite predictive likely because a sex imbalance between health and T2D donors.
+M:F donors
+5:1 healthy
+2:2 T2D
+
+
+

@@ -1,0 +1,23 @@
+name: islet-scrna-t2d
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scipy
+  - statsmodels
+  - scikit-learn
+  - jupyter
+  - jupyterlab
+  - plotly
+  - r-base
+  - r-biocmanager
+  - bioconductor-edger
+  - pip:
+      - mygene

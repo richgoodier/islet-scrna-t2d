@@ -1,0 +1,3 @@
+[2025-03-05 10:57:40,304] multiqc.core.file_search                           [INFO   ]  Search path: /scratch/goodier.r/files/qc_reports
+[2025-03-05 10:59:37,979] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 3274 reports
+[2025-03-05 11:06:16,577] multiqc.core.write_results                         [INFO   ]  Rendering plots. Some plots rendered flat because the number of series exceeds 2000, and this rendering might take a while. To disable, set `--interactive` (`plots_force_interactive: true` in config), or change the `plots_flat_numseries` to a higher value

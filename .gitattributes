@@ -1,0 +1,16 @@
+# Normalize line endings for cross-platform compatibility
+* text=auto
+
+# Force Unix line endings for shell scripts and Nextflow pipelines
+*.sh text eol=lf
+*.nf text eol=lf
+
+# Treat binary files as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.xlsx binary
+*.docx binary
+*.gz binary
+*.zip binary
