@@ -30,18 +30,18 @@
 ### Phase 2 — GitHub Essentials
 
 - [x] Create `.gitignore` (excludes `_archive/`, large matrices, FASTQ, BAM, OS files)
-- [ ] Create `environment.yml` (conda environment spec with all Python/R dependencies)
-- [ ] Create `LICENSE` (MIT)
+- [x] Create `environment.yml` (conda environment spec with all Python/R dependencies)
+- [x] Create `LICENSE` (MIT)
 - [x] Update `CLAUDE.md` with session goal
 
 ### Phase 3 — Documentation
 
-- [ ] Create root `README.md` (project overview, pipeline summary, key results, team credits)
-- [ ] Create `pipeline/README.md` (HPC pipeline instructions)
-- [ ] Create `analysis/README.md` (local analysis instructions, notebook descriptions)
-- [ ] Create `files/README.md` (data download instructions, ENA accession)
-- [ ] Create `gene_matrix/README.md` (how to regenerate count matrices)
-- [ ] Create `qc_reports/README.md` (QC summary)
+- [x] Create root `README.md` (project overview, pipeline summary, key results, team credits)
+- [x] Create `pipeline/README.md` (HPC pipeline instructions)
+- [x] Create `analysis/README.md` (local analysis instructions, notebook descriptions)
+- [x] Create `files/README.md` (data download instructions, ENA accession)
+- [x] Create `gene_matrix/README.md` (how to regenerate count matrices)
+- [x] Create `qc_reports/README.md` (QC summary)
 
 ### Phase 4 — Git Init & Final Review
 
@@ -70,4 +70,4 @@
 
 ---
 
-*Last updated: 2026-04-02*
+### Last updated: 2026-04-02
