@@ -45,11 +45,11 @@
 
 ### Phase 4 — Git Init & Final Review
 
-- [ ] Initialize git repository (`git init`, initial commit)
-- [ ] Review full repo structure — verify nothing broken, all paths logical
-- [ ] Check `.gitignore` is correctly excluding large files
-- [ ] Verify all new markdown files render correctly (no broken links)
-- [ ] Iterate corrections until none remain
+- [x] Initialize git repository (`git init`, initial commit — 118 files)
+- [x] Review full repo structure — verify nothing broken, all paths logical
+- [x] Check `.gitignore` is correctly excluding large files
+- [x] Verify all new markdown files render correctly (no broken links)
+- [x] Iterate corrections (fixed CLAUDE.md pipeline/ paths, STAR version notes)
 
 ---
 
