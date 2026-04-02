@@ -7,7 +7,7 @@ This directory contains the HPC pipeline for processing raw FASTQ files through 
 Install into your conda environment (see root `environment.yml`), plus:
 
 ```bash
-conda install -c bioconda star=2.7 cutadapt nextflow subread
+conda install -c bioconda star cutadapt nextflow subread
 ```
 
 Reference genome files (download separately):
@@ -41,7 +41,7 @@ Runs cutadapt (quality threshold 20) in parallel on all FASTQ files.
 nextflow run star_align.nf
 ```
 
-Aligns trimmed reads to GRCh38 using STAR. Processed 149 FASTQ files in ~3.5 hours on our cluster.
+Aligns trimmed reads to GRCh38 using STAR (project used v2.3.0e). Processed 149 FASTQ files in ~3.5 hours on our cluster.
 
 - `star_align_test.nf` — single-file test run before full batch
 - `bowtie2_align.nf` — alternative aligner (not used in final analysis)

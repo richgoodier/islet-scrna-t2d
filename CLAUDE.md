@@ -24,7 +24,7 @@ Bioinformatics course project (BINF 6310) reproducing the study "Single-Cell Tra
 
 ## Key Tools
 
-FastQC, MultiQC, Nextflow, cutadapt, STAR v2.3.0e, featureCounts (subread), edgeR (R)
+FastQC, MultiQC, Nextflow, cutadapt, STAR (v2.3.0e used in project; v2.7+ recommended for new runs), featureCounts (subread), edgeR (R)
 
 ## Pipeline Architecture
 
@@ -33,8 +33,8 @@ The analysis follows a linear pipeline documented in [pipeline.ipynb](pipeline.i
 1. **Data download** — FASTQ files from ENA via scripts in [files/](files/) (`download_healthy_beta_samples.sh`, `download_t2d_beta_samples.sh`)
 2. **Read QC filtering** — `files/count_reads.py` counts reads per file; samples with <750,000 reads were removed
 3. **Quality control** — FastQC per sample → MultiQC aggregation → `qc_reports/qc_analysis.ipynb`
-4. **Adapter trimming** — Nextflow pipeline `fastq_processing.nf` runs cutadapt (quality threshold 20) in parallel
-5. **Alignment** — Nextflow pipeline `star_align.nf` aligns to GRCh38 (Release 109) using STAR; index built by `build_star_index.sh` (SLURM, 16 threads, 32 GB, ~2 hr)
+4. **Adapter trimming** — Nextflow pipeline `pipeline/fastq_processing.nf` runs cutadapt (quality threshold 20) in parallel
+5. **Alignment** — Nextflow pipeline `pipeline/star_align.nf` aligns to GRCh38 (Release 109) using STAR; index built by `pipeline/build_star_index.sh` (SLURM, 16 threads, 32 GB, ~2 hr)
 6. **Count matrix** — featureCounts produces `gene_matrix/featureCounts_healthy/` and `gene_matrix/featureCounts_t2d/`; merged in `gene_matrix/combine_tables.ipynb` → `counts_combined.txt`
 7. **RPKM normalization** — R/edgeR calculates RPKM; outputs in `rpkm_values/rpkm_combined.txt` (62,711 genes × 142 samples)
 8. **Differential expression** — `analysis/volcano.ipynb`: filters genes present in <5 cells, computes log2 fold change and t-test p-values, generates volcano plot
@@ -45,9 +45,9 @@ The analysis follows a linear pipeline documented in [pipeline.ipynb](pipeline.i
 | File | Purpose |
 | ---- | ------- |
 | `pipeline.ipynb` | End-to-end pipeline walkthrough (primary documentation) |
-| `fastq_processing.nf` | Nextflow: parallel cutadapt trimming |
-| `star_align.nf` | Nextflow: STAR alignment (processes 149 FASTQ in ~3.5 hr) |
-| `build_star_index.sh` | SLURM job for STAR genome index |
+| `pipeline/fastq_processing.nf` | Nextflow: parallel cutadapt trimming |
+| `pipeline/star_align.nf` | Nextflow: STAR alignment (processes 149 FASTQ in ~3.5 hr) |
+| `pipeline/build_star_index.sh` | SLURM job for STAR genome index |
 | `files/create_download_scripts.py` | Filters ENA download scripts by sample type |
 | `files/count_reads.py` | Counts reads per FASTQ file, outputs CSV |
 | `gene_matrix/combine_tables.ipynb` | Merges healthy + T2D count matrices |
