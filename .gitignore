@@ -1,0 +1,53 @@
+# --- Archive folder (out-of-place / generated files) ---
+_archive/
+
+# --- Raw sequencing data (too large; download from ENA: PRJEB15401) ---
+*.fastq
+*.fastq.gz
+*.bam
+*.bam.bai
+*.sam
+
+# --- Large intermediate count/expression matrices (regenerate via pipeline) ---
+gene_matrix/counts_combined.txt
+gene_matrix/featureCounts_healthy/
+gene_matrix/featureCounts_t2d/
+rpkm_values/rpkm_combined.txt
+rpkm_values/rpkm_combined_with_classes.txt
+rpkm_values/rpkm_healthy/
+rpkm_values/rpkm_t2d/
+analysis/rpkm_combined_labeled.txt
+analysis/rpkm_for_GSEA.txt
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.env
+.venv/
+env/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- R ---
+.Rhistory
+.RData
+.Rproj.user/
+
+# --- Large media / generated reports (>50 MB) ---
+*.mp4
+*.avi
+*.mov
+qc_reports/multiqc_report.html
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Claude Code local settings ---
+.claude/settings.local.json
