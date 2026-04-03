@@ -43,12 +43,9 @@ nextflow run star_align.nf
 
 Aligns trimmed reads to GRCh38 using STAR (project used v2.3.0e). Processed 149 FASTQ files in ~3.5 hours on our cluster.
 
-- `star_align_test.nf` — single-file test run before full batch
-- `bowtie2_align.nf` — alternative aligner (not used in final analysis)
-
 ### 4. Download scripts
 
-`shell_scripts/` contains the ENA download scripts used to retrieve raw FASTQ files. See [`../files/README.md`](../files/README.md) for sample selection details.
+`shell_scripts/` contains the ENA download scripts used to retrieve raw FASTQ files. See [`../samples/README.md`](../samples/README.md) for sample selection details.
 
 ## Output
 

@@ -1,9 +1,0 @@
-wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR163/ERR1630034/AZ_B7.fastq.gz
-wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR163/ERR1630028/AZ_B12.fastq.gz
-wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR163/ERR1630046/AZ_C7.fastq.gz
-wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR163/ERR1630047/AZ_C8.fastq.gz
-wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR163/ERR1630050/AZ_D10.fastq.gz
-wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR163/ERR1630029/AZ_B2.fastq.gz
-wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR163/ERR1630044/AZ_C5.fastq.gz
-wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR163/ERR1630013/AZ_A1.fastq.gz
-wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR163/ERR1630035/AZ_B8.fastq.gz

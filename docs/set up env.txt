@@ -1,9 +1,0 @@
-module load miniconda3
-source activate
-conda create --name project -y python pip conda
-conda-25.3.0
-
-conda activate project
-(conda deactivate)
-
-conda install -c bioconda $NAME

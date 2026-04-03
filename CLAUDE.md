@@ -9,11 +9,14 @@ Reorganize this project directory into a professional GitHub repository. Work is
 - Never delete or alter existing project file contents
 - Move unwanted/out-of-place files to `_archive/` (gitignored), not deleted
 - All task progress tracked in `TASKS.md`
+- No personal information should be included in the repo.  For example, a user name or email id.
 
 ## Further instructions
 
-- Whenever possible, use subagents
-- Think carefully, take your time
+- Frame as a reproducibility study.
+- Break down goals into discrete tasks and delegate each task when possible.  Document your progress.
+- Whenever possible, use subagents.
+- Think carefully, take your time.
 - Check your work after each task.  Check to see if previous tasks have been broken by your recent work.  Return to these tasks if needed.
 - When you think you have finished, walk through iterations of checking everything and making necessary corrections until no more corrections are needed.
 - Keep in mind that this is mainly for my portfolio to find a job.
@@ -30,14 +33,14 @@ FastQC, MultiQC, Nextflow, cutadapt, STAR (v2.3.0e used in project; v2.7+ recomm
 
 The analysis follows a linear pipeline documented in [pipeline.ipynb](pipeline.ipynb):
 
-1. **Data download** — FASTQ files from ENA via scripts in [files/](files/) (`download_healthy_beta_samples.sh`, `download_t2d_beta_samples.sh`)
-2. **Read QC filtering** — `files/count_reads.py` counts reads per file; samples with <750,000 reads were removed
+1. **Data download** — FASTQ files from ENA via scripts in [samples/](samples/) (`download_healthy_beta_samples.sh`, `download_t2d_beta_samples.sh`)
+2. **Read QC filtering** — `samples/count_reads.py` counts reads per file; samples with <750,000 reads were removed
 3. **Quality control** — FastQC per sample → MultiQC aggregation → `qc_reports/qc_analysis.ipynb`
 4. **Adapter trimming** — Nextflow pipeline `pipeline/fastq_processing.nf` runs cutadapt (quality threshold 20) in parallel
 5. **Alignment** — Nextflow pipeline `pipeline/star_align.nf` aligns to GRCh38 (Release 109) using STAR; index built by `pipeline/build_star_index.sh` (SLURM, 16 threads, 32 GB, ~2 hr)
 6. **Count matrix** — featureCounts produces `gene_matrix/featureCounts_healthy/` and `gene_matrix/featureCounts_t2d/`; merged in `gene_matrix/combine_tables.ipynb` → `counts_combined.txt`
 7. **RPKM normalization** — R/edgeR calculates RPKM; outputs in `rpkm_values/rpkm_combined.txt` (62,711 genes × 142 samples)
-8. **Differential expression** — `analysis/volcano.ipynb`: filters genes present in <5 cells, computes log2 fold change and t-test p-values, generates volcano plot
+8. **Differential expression** — `analysis/differential_expression.ipynb`: filters genes present in <5 cells, computes log2 fold change and t-test p-values, generates volcano plot
 9. **ID mapping** — `analysis/ensembl_to_ids.ipynb` uses MyGeneInfo API to convert Ensembl IDs to gene symbols
 
 ## Key Files
@@ -48,11 +51,11 @@ The analysis follows a linear pipeline documented in [pipeline.ipynb](pipeline.i
 | `pipeline/fastq_processing.nf` | Nextflow: parallel cutadapt trimming |
 | `pipeline/star_align.nf` | Nextflow: STAR alignment (processes 149 FASTQ in ~3.5 hr) |
 | `pipeline/build_star_index.sh` | SLURM job for STAR genome index |
-| `files/create_download_scripts.py` | Filters ENA download scripts by sample type |
-| `files/count_reads.py` | Counts reads per FASTQ file, outputs CSV |
+| `samples/create_download_scripts.py` | Filters ENA download scripts by sample type |
+| `samples/count_reads.py` | Counts reads per FASTQ file, outputs CSV |
 | `gene_matrix/combine_tables.ipynb` | Merges healthy + T2D count matrices |
-| `analysis/volcano.ipynb` | Main differential expression analysis |
-| `rpkm_values/calculate_rpkm.txt` | R script for RPKM calculation |
+| `analysis/differential_expression.ipynb` | Main differential expression analysis |
+| `rpkm_values/calculate_rpkm.R` | R script for RPKM calculation |
 
 ## Data Notes
 

@@ -1,12 +1,12 @@
 nextflow.enable.dsl = 2
 
-params.reads = '/scratch/goodier.r/project_files/trimmed_t2d/*.fastq'
-// params.reads = '/scratch/goodier.r/project_files/trimmed_healthy/*.fastq'
+params.reads = '/scratch/<username>/project_files/trimmed_t2d/*.fastq'
+// params.reads = '/scratch/<username>/project_files/trimmed_healthy/*.fastq'
 
-params.outdir = '/scratch/goodier.r/project_files/trimmed_t2d/aligned_t2d'
-// params.outdir = '/scratch/goodier.r/project_files/trimmed_healthy/aligned_healthy'
+params.outdir = '/scratch/<username>/project_files/trimmed_t2d/aligned_t2d'
+// params.outdir = '/scratch/<username>/project_files/trimmed_healthy/aligned_healthy'
 
-params.genomeDir = '/scratch/goodier.r/project_files/genome/genome_index'
+params.genomeDir = '/scratch/<username>/project_files/genome/genome_index'
 
 params.threads = 8
 

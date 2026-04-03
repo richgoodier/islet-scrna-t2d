@@ -6,15 +6,15 @@
 #SBATCH --mem 32G                         # How much memory
 #SBATCH -t 8:00:00                        # How long
 #SBATCH --mail-type=END,FAIL
-#SBATCH --mail-user=goodier.r@northeastern.edu
-#SBATCH --out=/courses/BINF6310.202530/students/SEC04_Group_3/files/test/genome/genome_index/logs/%x_%j.log
-#SBATCH --error=/courses/BINF6310.202530/students/SEC04_Group_3/files/test/genome/genome_index/logs/%x_%j.err
+#SBATCH --mail-user=<your-email>
+#SBATCH --out=./genome_index/logs/%x_%j.log
+#SBATCH --error=./genome_index/logs/%x_%j.err
 
 # Setup environment
-conda activate project
+conda activate islet-scrna-t2d
 
 # Create logs directory if it doesn't exist
-mkdir -p /courses/BINF6310.202530/students/SEC04_Group_3/files/test/genome/genome_index/logs
+mkdir -p ./genome_index/logs
 
 # Run STAR index generation
 STAR --runThreadN 16 \
