@@ -30,4 +30,4 @@ This file is not tracked in git due to size (~55 MB). It is the input to RPKM no
 
 ## Next Step
 
-Pass `counts_combined.txt` to `../rpkm_values/calculate_rpkm.txt` (R/edgeR) to compute RPKM values.
+Pass `counts_combined.txt` to `../rpkm_values/calculate_rpkm.R` (R/edgeR) to compute RPKM values.

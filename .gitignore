@@ -38,16 +38,25 @@ env/
 .RData
 .Rproj.user/
 
+# --- Pipeline intermediate / temp files ---
+genome_index/
+*_STARtmp/
+*.log
+*.err
+
 # --- Large media / generated reports (>50 MB) ---
 *.mp4
 *.avi
 *.mov
-qc_reports/multiqc_report.html
 
 # --- OS ---
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# --- Claude Code local settings ---
+# --- Claude Code files ---
 .claude/settings.local.json
+notes_for_claude.md
+CLAUDE.md
+TASKS.md
+file_rename_review.md
