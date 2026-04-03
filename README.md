@@ -70,4 +70,4 @@ With RPKM data in place, open notebooks in order:
 
 ## Acknowledgments
 
-This project was developed collaboratively by Group 3 for BINF 6310: Dinesh Sambhaji Pradhan, Asmitha Nagajothi Purushotam, Vedant Kulkarni, and Richard Goodier.
+This project was developed collaboratively. Contributions from all four group members are gratefully acknowledged.
