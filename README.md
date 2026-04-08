@@ -1,6 +1,6 @@
 # Islet scRNA-seq in Type 2 Diabetes
 
-A reproduction and extension of the study **"Single-Cell Transcriptome Profiling of Human Pancreatic Islets in Health and Type 2 Diabetes"** (Segerstolpe et al., 2016), produced as a course project for BINF 6310 (Spring 2025).
+A reproduction and extension of the study **"Single-Cell Transcriptome Profiling of Human Pancreatic Islets in Health and Type 2 Diabetes"** (Segerstolpe et al., 2016).
 
 We reproduced the core RNA-seq pipeline from raw FASTQ files through differential expression analysis, then extended the work by training a logistic regression classifier to identify transcriptomic predictors of T2D — with **IRF2BPL** emerging as the top predictive feature alongside 9 established T2D risk genes (GCK, CDKAL1, KCNJ11, SLC30A8, IRS1, GLIS3, JAZF1, SLC16A11, SREBF1).
 
@@ -70,4 +70,4 @@ With RPKM data in place, open notebooks in order:
 
 ## Acknowledgments
 
-This project was developed collaboratively. Contributions from all four group members are gratefully acknowledged.
+This project was developed collaboratively by Asmitha Nagajothi Purushotam, Vedant Kulkarni, Richard Goodier, and one additional team member.

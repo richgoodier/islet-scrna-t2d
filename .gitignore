@@ -54,6 +54,12 @@ genome_index/
 Thumbs.db
 desktop.ini
 
+# --- Presentation (pending teammate permission) ---
+presentation/
+
+# --- Course artifacts (not public-facing) ---
+docs/individual_writeup.pdf
+
 # --- Claude Code files ---
 .claude/settings.local.json
 notes_for_claude.md
